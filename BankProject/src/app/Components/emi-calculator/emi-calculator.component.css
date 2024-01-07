@@ -1,0 +1,106 @@
+.body {
+  padding: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body h2 {
+  font-size: 35px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+
+.amount-inputs,
+.year-inputs,
+.intrest-inputs {
+  display: flex;
+  gap: 15px;
+  height: 40px;
+  align-items: center;
+}
+
+.amount-inputs p,
+.year-inputs p,
+.intrest-inputs p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.amount-inputs input {
+  width: 90px;
+  height: 40px;
+}
+
+.year-inputs input {
+  width: 40px;
+  height: 40px;
+}
+
+.intrest-inputs input {
+  width: 60px;
+  height: 40px;
+}
+
+.body form .mat-mdc-slider {
+  width: 180px;
+}
+
+.body form input[type="number"],
+select {
+  /* width: 100px; */
+  padding: 0px 0px 0px 10px;
+  /* margin: 8px 0; */
+  display: inline-block;
+  /* border: none; */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.body form input[type="number"]::-webkit-inner-spin-button,
+.body form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+button {
+  background-color: #3f51b5;
+}
+button:hover {
+  background-color: #28357c;
+}
+
+.body .submit {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-content {
+  display: flex;
+  gap: 20px;
+}
+
+.result {
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result h3 {
+  font-size: 20px;
+}
+
+.result h3 span {
+  font-size: 22px;
+  font-weight: 600;
+}

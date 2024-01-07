@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=REM:ital,wght@1,900&family=Rethink+Sans:wght@700&display=swap");
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 50px 180px; */
+  /* background-color: #0062ff0e; */
+}
+.bg {
+  width: 100%;
+  height: 500px;
+  background-image: linear-gradient(180deg, #009dff, white);
+  position: absolute;
+  z-index: -1;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  color: white;
+}
+.text-heading {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.text-heading h2 {
+  font-family: "REM", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
+  font-size: 38px;
+}
+.text-content {
+  display: flex;
+  justify-content: center;
+}
+.text-content p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0;
+}
+
+/* ........eligibility-content............. */
+
+.eligibility-content {
+  background: rgb(0, 22, 255);
+  background: linear-gradient(
+    90deg,
+    rgb(25, 113, 195) 0%,
+    rgba(32, 94, 192, 1) 35%,
+    rgba(0, 168, 255, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
+    rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
+  border-radius: 25px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  min-width: 1200px;
+}
+.eligibility-content-heading h2 {
+  line-height: 43px;
+  font-weight: 800;
+  color: #fff;
+  font-size: 36px;
+}
+.eligibility-content-box1 {
+  width: 100%;
+  border-radius: 25px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+}
+.eligibility-content-box1-heading {
+  width: 100%;
+  background-color: #ad1e23;
+  padding: 23px 40px 20px !important;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.eligibility-content-box1-heading h2 {
+  line-height: 21px;
+  font-weight: 500;
+  font-size: 18px !important;
+  color: #fff;
+  margin: 0;
+}
+.eligibility-content-box1 span {
+  font-weight: 600;
+}
+.eligibility-content-box1-content {
+  padding: 23px 60px 20px 40px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.eligibility-content-box1-content li {
+  font-size: 14px;
+}
+.apply-loan-button button {
+  background: #1e65c1;
+  color: #fff;
+  border: 1px solid #1e65c1;
+  border-radius: 28px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 34px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+.arrow-bg1 {
+  height: 60px;
+  width: 60px;
+  background-color: #0d8be7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  position: absolute;
+}
+.arrow-bg2 {
+  height: 75%;
+  width: 75%;
+  background-color: #1b6dc2;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow-bg1 .arrow-bg2 img {
+  width: 50px;
+  z-index: 999;
+  position: absolute;
+  color: white;
+}
+.eligibility-content-show-button button {
+  font-weight: 800;
+  padding: 15px 34px;
+  letter-spacing: 0.05em;
+  width: 246px;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 28px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+.eligibility-content-show-button button:hover {
+  background-color: #1a6ecd;
+  color: white;
+  border: #1a6ecd;
+}
+/* ..............calculator-box.................. */
+.calculator-box {
+  max-width: 800px;
+  min-width: 1200px;
+  /* height: 500px; */
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
+    rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
+  border: solid 1px #ececec;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  z-index: 1;
+  background-color: white;
+  padding: 32px 40px;
+}
+.calculator-box1 {
+  width: 100%;
+  display: flex;
+}
+form {
+  width: 65%;
+}
+.calculator-result {
+  width: 35%;
+}
+.amount-inputs,
+.year-inputs,
+.intrest-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* height: 40px; */
+  /* align-items: center; */
+}
+
+.amount-inputs p,
+.year-inputs p,
+.intrest-inputs p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.amount-inputs input {
+  width: 90px;
+  height: 30px;
+}
+
+.year-inputs input {
+  width: 90px;
+  height: 30px;
+}
+
+.intrest-inputs input {
+  width: 60px;
+  height: 30px;
+}
+
+.body form .mat-mdc-slider {
+  width: 280px;
+}
+
+.body form input[type="number"],
+select {
+  /* width: 100px; */
+  padding: 0px 0px 0px 10px;
+  /* margin: 8px 0; */
+  display: inline-block;
+  /* border: none; */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.body form input[type="number"]::-webkit-inner-spin-button,
+.body form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.form-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.form-contents {
+  min-width: 300px;
+}
+.result-box {
+  background-color: #006eff1d;
+  height: 250px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.result-box-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.result-box-text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 500;
+}
+.result-box-text span {
+  margin-top: 15px;
+  font-size: 20px;
+  word-spacing: -5px;
+  font-weight: 900;
+}
+.result-box button {
+  margin-top: 25px;
+  height: 50px;
+  width: 80%;
+  background: #069bff;
+  color: #fff;
+  border: 1px solid #069bff;
+  border-radius: 28px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 34px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.result-box button:hover {
+  background-color: #fff;
+  color: #069bff;
+  transition: all ease-in 0.3s;
+  text-decoration: none;
+}
+.disclaimer p {
+  margin-top: 10px;
+  color: #828282;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+.disclaimer p span{
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.714);
+}

@@ -23,45 +23,44 @@ export class PersonalLoanComponent implements OnInit {
   b: string = '';
   c: string = '';
   loanApplication: any;
-  currentUser!:User;
-  userLogin:boolean=false;
-  empLogin:boolean=false;
+  currentUser!: User;
+  userLogin: boolean = false;
+  empLogin: boolean = false;
 
   constructor(
     private loanService: LoanService,
     private data: DataService,
     private router: Router,
-    private stateService:StateService,
-    private userService:UserService
+    private stateService: StateService,
+    private userService: UserService
   ) {}
 
   ngOnInit() {
     const refreshFlag = this.stateService.getRefreshFlag();
-    if(refreshFlag){
+    if (refreshFlag) {
       this.refresh();
     }
     this.stateService.setRefreshFlag(true);
     this.loanService.getLoan().subscribe((res: any) => {
       this.loanApplication = res;
     });
-    this.userLogin=this.data.userLogin;
-    this.empLogin=this.data.employeeLogin;
-    if(this.data.currentUser){
-      this.currentUser=this.data.currentUser;
+    this.userLogin = this.data.userLogin;
+    this.empLogin = this.data.employeeLogin;
+    if (this.data.currentUser) {
+      this.currentUser = this.data.currentUser;
     }
-    
   }
 
-  refresh(){
-    const uid=sessionStorage.getItem("UserId")
-    if(uid!=null&&uid!="false"){
-      const id=parseInt(uid,10);
-      this.userService.getUserById(id).subscribe((res:any)=>{
-        this.currentUser=res;
-      })
+  refresh() {
+    const uid = sessionStorage.getItem('UserId');
+    if (uid != null && uid != 'false') {
+      const id = parseInt(uid, 10);
+      this.userService.getUserById(id).subscribe((res: any) => {
+        this.currentUser = res;
+      });
     }
-    const eid=sessionStorage.getItem("EmployeeId");
-    if(eid!=null&&eid!="false"){
+    const eid = sessionStorage.getItem('EmployeeId');
+    if (eid != null && eid != 'false') {
       this.loanService.getLoan().subscribe((res: any) => {
         this.loanApplication = res;
       });
@@ -95,19 +94,13 @@ export class PersonalLoanComponent implements OnInit {
   }
 
   active(name: string) {
-    this.userLogin=sessionStorage.getItem("userLogin")==="true"
-    this.empLogin=sessionStorage.getItem("employeeLogin")==="true"
+    this.userLogin = sessionStorage.getItem('userLogin') === 'true';
+    this.empLogin = sessionStorage.getItem('employeeLogin') === 'true';
     const a = document.querySelector('.act') as HTMLElement;
-    const b = document.querySelector('.active') as HTMLElement;
+    const b = document.querySelector('.activity') as HTMLElement;
     a.classList.remove('act');
-    b.classList.remove('active');
-    this.sample(a,b);
+    b.classList.remove('activity');
     document.querySelector('.' + name)?.classList.add('act');
-    document.querySelector('.' + name + '-content')?.classList.add('active');
-  }
-
-  sample(a:any,b:any){
-    a.classList.remove('act');
-    b.classList.remove('active');
+    document.querySelector('.' + name + '-content')?.classList.add('activity');
   }
 }
