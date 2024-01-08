@@ -168,9 +168,9 @@
   min-width: 1200px;
   /* height: 500px; */
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 0px 1px,
-    rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
-    rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
+  box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 20px 10px,
+    rgba(0, 0, 0, 0.05) 0px 1px 20px 6px, rgba(0, 0, 0, 0.03) 3px 3px 8px 1px,
+    rgba(0, 0, 0, 0.1) 0px 20px 30px 1px;
   border: solid 1px #ececec;
   margin-bottom: 50px;
   margin-top: 30px;
@@ -313,7 +313,7 @@ select {
   font-size: 12px;
   line-height: 15px;
 }
-.disclaimer p span{
+.disclaimer p span {
   font-weight: 600;
   color: rgba(0, 0, 0, 0.714);
 }
