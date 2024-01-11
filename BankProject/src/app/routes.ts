@@ -1,6 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
+import { Routes } from '@angular/router';
 import { LoginComponent } from './Components/login/login.component';
 import { HomeLoanComponent } from './Components/home-loan/home-loan.component';
 import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dashboard.component';
@@ -14,9 +12,8 @@ import { SignupComponent } from './Components/signup/signup.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { PersonalLoanEligibilityComponent } from './Components/personal-loan-eligibility/personal-loan-eligibility.component';
 import { EmiCalculatorComponent } from './Components/emi-calculator/emi-calculator.component';
-import { PersonalLoanHomeComponent } from './Components/personal-loan-home/personal-loan-home.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
@@ -29,13 +26,10 @@ const routes: Routes = [
   { path: 'personal-loan', component: PersonalLoanComponent },
   { path: 'check-eligibility', component: CheckEligibilityComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'personalLoanEligibility', component: PersonalLoanEligibilityComponent },
+  {
+    path: 'personalLoanEligibility',
+    component: PersonalLoanEligibilityComponent,
+  },
   { path: 'emiCalculator', component: EmiCalculatorComponent },
-  { path: 'personalLoanHome', component: PersonalLoanHomeComponent },
+  { path: 'emiCalculator', component: PersonalLoanHomeComponent },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}

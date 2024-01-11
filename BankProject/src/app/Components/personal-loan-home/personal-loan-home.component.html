@@ -1,0 +1,27 @@
+<div class="personal-loan-body">
+  <div class="personal-loan-top">
+    <div class="pesonal-loan-head">
+      <app-header></app-header>
+    </div>
+    <div class="personal-loan-content">
+      <nav>
+        <a (click)="active('personalLoan')">personal loan</a>
+        <a (click)="active('emi')">emi calculator</a>
+        <a (click)="active('eligibility')">eligibility</a>
+        <a (click)="active('intrest')">intrest rate</a>
+        <a (click)="active('document')">documents</a>
+        <a (click)="active('apply')">apply now</a>
+        <div class="animation {{a}}"></div>
+      </nav>
+      <div class="personalLoan"></div>
+      <div class="emi"><app-emi-calculator></app-emi-calculator></div>
+      <div class="eligibility personal-loan-content-active"><app-personal-loan-eligibility></app-personal-loan-eligibility></div>
+      <div class="intrest"></div>
+      <div class="document"><app-personal-loan-documents></app-personal-loan-documents></div>
+      <div class="apply"></div>
+    </div>
+  </div>
+  <div class="personal-loan-footer">
+    <app-footer></app-footer>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+
+.container {
+    display: flex;
+    padding: 20px 20px 20px 20px;
+    background-color: #eff2f4;
+  }
+  h2{
+    color:#074a86;
+}
+  img {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .text {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Muli",sans-serif;
+    padding-left: 20px;
+    padding-right: 10%;
+   
+    float: left;
+  }
+  .rounded-box {
+    border-radius: 4px; /* Adjust the border-radius for the desired roundness */
+    background-color: rgb(1, 132, 225); /* Background color */
+    color: #ffffff; /* Text color */
+   
+    text-align: center; /* Center-align the text */
+    width: 210px; /* Adjust the width as needed */
+    padding: 8PX;
+    padding-bottom: 1PX;
+    margin-top: 10%;
+    cursor: pointer;
+}
+.second-container {
+    display: flex;
+    padding: 20px 50px 20px 220px;
+    background-color: #d0d4d7;
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 10%;
+    float: left;
+    
+}
+/* .tabs button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+} */
+
+.tabs button.active {
+  background-color: rgb(1, 132, 225);; /* Change this to the desired color for active tabs */
+  color: #fff;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 10px;
+    padding-right: 20px;
+    border-color: #eff2f4;
+}
+.document-content {
+    padding-block-end: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+   display: flex;
+    background-color: #929597;
+    margin-left: auto; 
+}
+
+.document-list {
+    margin: 20px; /* Adjust the margin as needed */
+    
+}
+
+
+h1{
+   color: #3a3a3a; 
+  font: bold 22px arial;
+}
+.clickable-image {
+  cursor: pointer;
+}
+
+/* .active-link {
+  background-color: #3498db; 
+  cursor: pointer;
+} */

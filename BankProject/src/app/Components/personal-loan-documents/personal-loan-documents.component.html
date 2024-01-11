@@ -1,0 +1,56 @@
+<div class="container">
+<div class="text">
+    <h2>Documents Required For Personal Loans</h2>
+    <p>Your Bank makes your loan process seamless with the minimal documents required for a Personal Loan. Our Personal Loan documentation includes an ID proof, an address proof, and a bank statement or a salary slip. For self-employed applicants, the documents required may differ. Be sure to check the documents needed before applying for Personal Loan.</p>
+    <p>Your Bank also offers pre-approved loans to its select clients. For pre-approved loans no documentation is required, and once an application is made, the loan is instantly disbursed in the applicant’s account.</p>
+    <div class="rounded-box">
+        <p (click)="onImageClick()">GET PERSONAL LOAN</p>
+    </div>
+</div>
+
+<div class="img"  >
+    
+    <img (click)="onImageClick()" class="clickable-image" src="assets/Images/Personal-Loan-img.png" alt="Clickable Image">
+   
+</div>
+</div>
+<div class="second-container">
+    <h1>List of documents</h1>
+   </div>
+<div class="second-container">
+    
+    <div>
+        <div class="tabs">
+            <button (click)="showSalaried()" [class.active]="selectedTab === 'salaried'">Salaried</button>
+            <button (click)="showSelfEmployed()" [class.active]="selectedTab === 'selfEmployed'">Self-Employed</button>
+        </div>
+    
+        <div class="document-content">
+            <div *ngIf="selectedTab === 'salaried'" class="document-list">
+                <h2>List Of Documents For Salaried</h2>
+                <ul>
+                    <li>Proof of Identity: Passport / Driving License / Voters ID / PAN Card (any one).</li>
+                    <li>Proof of Residence: Leave and License Agreement / Utility Bill (not more than 3 months old) / Passport (any one).</li>
+                    <li>Latest 3 months Bank Statement (where salary/income is credited).</li>
+                    <li>Salary slips for last 3 months.</li>
+                    <li>2 Passport Size photographs.</li>
+                </ul>
+            </div>
+    
+            <div *ngIf="selectedTab === 'selfEmployed'" class="document-list">
+                <h2>List Of Documents For Self-Employed</h2>
+                <ul>
+                    <li>KYC Documents: Proof of Identity; Address proof; DOB proof.</li>
+                    <li>Proof of Residence: Leave and License Agreement / Utility Bill (not more than 3 months old) / Passport (any one).</li>
+                    <li>Income proof (audited financials for the last two years).</li>
+                    <li>Latest 6 months Bank statement.</li>
+                    <li>Office address proof.</li>
+                    <li>Proof of residence or office ownership.</li>
+                    <li>Proof of continuity of business.</li>
+                    
+                </ul>
+                *Conditions apply.<br>
+                *Your Bank reserves the rights to call upon additional documents at its discretion.
+            </div>
+    </div>
+</div>

@@ -1,0 +1,142 @@
+.personal-loan-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* ..........................header.................................... */
+.pesonal-loan-head{
+    height: 80px;
+}
+/* ...............footer............. */
+.personal-loan-footer{
+    bottom: 0;
+}
+/* //////////////////personal-loan-top///////////////////// */
+.personal-loan-top{
+    display: flex;
+    flex-direction: column;
+}
+/* ......................pesonal-loan-content............... */
+.personal-loan-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0px;
+}
+nav{
+    position: relative;
+    /* margin: 270px auto 0; */
+    margin-bottom: 25px;
+    width: 810px;
+    height: 50px;
+    background: #34495e;
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
+}
+nav a{
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+}
+nav .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: #1abc9c;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: none;
+    color: white;
+}
+a:nth-child(1){
+    width: 150px;
+}
+nav .start-personalLoan,a:nth-child(1):hover~.animation{
+    width: 150px;
+    left: 0;
+}
+a:nth-child(2){
+    width: 150px;
+}
+nav .start-emi,a:nth-child(2):hover~.animation{
+    width: 150px;
+    left: 150px;
+}
+a:nth-child(3){
+    width: 120px;
+}
+nav .start-eligibility,a:nth-child(3):hover~.animation{
+    width: 120px;
+    left: 300px;
+}
+a:nth-child(4){
+    width: 150px;
+}
+nav .start-intrest,a:nth-child(4):hover~.animation{
+    width: 150px;
+    left: 420px;
+}
+a:nth-child(5){
+    width: 120px;
+}
+nav .start-document,a:nth-child(5):hover~.animation{
+    width: 120px;
+    left: 570px;
+}
+a:nth-child(6){
+    width: 120px;
+}
+nav .start-apply,a:nth-child(6):hover~.animation{
+    width: 120px;
+    left: 690px;
+}
+
+/* .................................... */
+.personalLoan{
+    width: 0px;
+    height: 0px;
+    background-color: #54a923;
+}
+.intrest{
+    width: 0px;
+    height: 0px;
+    background-color: #2323a9;
+    opacity: 0;
+}
+.document{
+    width: 0px;
+    height: 0px;
+    background-color: #eff2f4;
+    opacity: 0;
+}
+.eligibility{
+    width: 0px;
+    height: 0px;
+    /* background-color: #f6ff00; */
+    opacity: 0;
+    overflow: hidden;
+}
+.emi{
+    width: 0px;
+    height: 0px;
+    /* background-color: #ff006a; */
+    opacity: 0;
+}
+.personal-loan-content-active{
+    width: 100%;
+    height: auto;
+    opacity: 1;
+}

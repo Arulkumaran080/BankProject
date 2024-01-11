@@ -1,0 +1,149 @@
+<div class="bg"></div>
+<div class="body">
+  <div class="text">
+    <div class="text-heading">
+      <h2>Calculate your Personal Loan Eligibility</h2>
+    </div>
+    <div class="text-content">
+      <p>
+        YOUR Bank Personal Loan Eligibility Calculator helps you to determine
+        the maximum loan amount you can avail from us. It takes into account
+        your income, repayment capacity, credit history and existing
+        liabilities.
+      </p>
+    </div>
+  </div>
+  <div class="calculator-box">
+    <div class="calculator-box1">
+      <form >
+      <div class="form-content">
+        <div class="amount form-contents">
+          <div class="amount-inputs">
+            <p>Monthly Income</p>
+            <input type="number" [(ngModel)]="monthlyIncome" name="amount" id="" />
+          </div>
+          <mat-slider min="30000" max="4000000" step="1000">
+            <input matSliderThumb [(ngModel)]="monthlyIncome" name="slide-amount" #slider />
+          </mat-slider>
+        </div>
+        <div class="year form-contents">
+          <div class="year-inputs">
+            <p>Total Existing Obligation/EMI </p>
+            <input type="number" [(ngModel)]="existingEMI" name="year" id="" />
+          </div>
+          <mat-slider min="0" max="4000000" step="1000">
+            <input matSliderThumb [(ngModel)]="existingEMI" name="slide-year" #slider />
+          </mat-slider>
+        </div>
+        <div class="intrest form-contents">
+          <div class="intrest-inputs">
+            <p>Loan Tenure</p>
+            <input type="number" [(ngModel)]="n" name="intrest" id="" />
+          </div>
+          <mat-slider min="12" max="72" step="12">
+            <input matSliderThumb [(ngModel)]="n" name="slide-intrest" #slider />
+          </mat-slider>
+        </div>
+      </div>
+    </form>
+      <div class="calculator-result">
+        <div class="result-box">
+          <div class="result-box-text">
+          <p>You are eligible for a total</p> 
+            <p>loan amount of Rs</p>
+            <span>₹{{result1}}</span>
+          </div>
+            <button (click)="calculate()">Calculate</button>
+        </div>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <p><span>Disclaimer *:</span> The information provided is not guaranteed to be accurate or complete and is indicative and tentative in nature. Users are advised to exercise caution and seek professional advice before making decisions based on it. YOUR Bank bears no liability for updating the data or for any losses arising from the use of this information.</p>
+    </div>
+  </div>
+  <div class="eligibility-content">
+    <div class="eligibility-content-heading">
+      <h2>Personal Loan Eligibility Criteria</h2>
+    </div>
+    <div *ngIf="showContent" class="eligibility-content-box1">
+      <div class="eligibility-content-box1-heading">
+        <h2>Personal Loan eligibility criteria for salaried individuals</h2>
+      </div>
+      <div class="eligibility-content-box1-content">
+        <ul>
+          <li><span>Age:</span> Between 20 years and 58 years</li>
+          <li>
+            <span>Net salary**:</span> Minimum monthly income of Rs 30,000
+          </li>
+          <li><span>Total years of work experience:</span> 2 years</li>
+          <li>
+            <span>Duration of years at the current residence:</span> 1 year
+          </li>
+        </ul>
+        <span>Note:</span>
+        <p>
+          **The minimum salary requirement will differ depending on the profile
+          (type of employer, having a relationship with YOUR Bank etc.) of the
+          customer.
+        </p>
+        <div class="apply-loan-button">
+          <button class="btn">APPLY NOW</button>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="arrow-bg1">
+      <div class="arrow-bg2">
+        <img src="assets/Images/arrow.png" alt="" />
+      </div>
+    </div> -->
+    <div *ngIf="showContent" class="eligibility-content-box1 box2">
+      <div class="eligibility-content-box1-heading">
+        <h2>
+          Personal Loan eligibility criteria for self-employed individuals
+        </h2>
+      </div>
+      <div class="eligibility-content-box1-content">
+        <ul>
+          <li>
+            <span>Age: Minimum:</span> 28 years (for self-employed individuals)
+            and 25 years (for doctors). Maximum: 65 years
+          </li>
+
+          <li>
+            <span>Minimum turnover:</span> Rs 40 lakh for non-professionals and
+            Rs 15 lakh for professionals as per audited financials
+          </li>
+
+          <li>
+            <span>Minimum profit after tax:</span> Rs 2 lakh for proprietorship
+            firms/self-employed individuals and Rs 1 lakh for non-professionals
+            as per audited financials
+          </li>
+
+          <li>
+            <span>Business stability:</span> In current business for at least 5
+            years and minimum 3 years for doctors
+          </li>
+
+          <li>
+            <span>Existing relationship with YOUR Bank:</span> Minimum 1 year
+            liability relationship (Current or Savings Account) or loan
+            relationship either live or closed in the last 36 months; repayment
+            track as required.
+          </li>
+        </ul>
+        <span>Note:</span>
+        <p>
+          YOUR Bank provides Personal Loans to self-employed individuals under
+          business instalment loans.
+        </p>
+        <div class="apply-loan-button">
+          <button class="btn">APPLY NOW</button>
+        </div>
+      </div>
+    </div>
+    <div class="eligibility-content-show-button">
+      <button class="btn" (click)="showEligibilityContent()">{{showContentButton}}</button>
+    </div>
+  </div>
+</div>

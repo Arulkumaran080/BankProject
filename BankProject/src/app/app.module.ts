@@ -27,7 +27,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { SignupComponent } from './Components/signup/signup.component';
-import { DummyComponent } from './Components/dummy/dummy.component';
+import { PersonalLoanEligibilityComponent } from './Components/personal-loan-eligibility/personal-loan-eligibility.component';
+import { EmiCalculatorComponent } from './Components/emi-calculator/emi-calculator.component';
+import { PersonalLoanHomeComponent } from './Components/personal-loan-home/personal-loan-home.component';
+import { PersonalLoanDocumentsComponent } from './Components/personal-loan-documents/personal-loan-documents.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { DummyComponent } from './Components/dummy/dummy.component';
     PersonalLoanComponent,
     CheckEligibilityComponent,
     SignupComponent,
-    DummyComponent,
+    PersonalLoanEligibilityComponent,
+    EmiCalculatorComponent,
+    PersonalLoanHomeComponent,
+    PersonalLoanDocumentsComponent,
   ],
   imports: [
     BrowserModule,
