@@ -7,10 +7,12 @@ import { map } from 'rxjs/operators';
 })
 export class AdminService {
 
+  baseUrl:string="http://localhost:8080";
+
   constructor(private http:HttpClient) { }
 
   getUser(){
-    return this.http.get<any>("http://localhost:8080/admin");
+    return this.http.get<any>(this.baseUrl+"/admin");
   }
 
 }

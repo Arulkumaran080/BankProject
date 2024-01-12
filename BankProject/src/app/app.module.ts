@@ -31,6 +31,7 @@ import { PersonalLoanEligibilityComponent } from './Components/personal-loan-eli
 import { EmiCalculatorComponent } from './Components/emi-calculator/emi-calculator.component';
 import { PersonalLoanHomeComponent } from './Components/personal-loan-home/personal-loan-home.component';
 import { PersonalLoanDocumentsComponent } from './Components/personal-loan-documents/personal-loan-documents.component';
+import { PersonalLoanApplication1Component } from './Components/personal-loan-application1/personal-loan-application1.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { PersonalLoanDocumentsComponent } from './Components/personal-loan-docum
     EmiCalculatorComponent,
     PersonalLoanHomeComponent,
     PersonalLoanDocumentsComponent,
+    PersonalLoanApplication1Component,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,7 @@ import { PersonalLoanDocumentsComponent } from './Components/personal-loan-docum
     MatFormFieldModule,
     MatCardModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

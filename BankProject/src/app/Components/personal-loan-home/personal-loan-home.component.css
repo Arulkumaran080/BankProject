@@ -121,6 +121,7 @@ nav .start-apply,a:nth-child(6):hover~.animation{
     height: 0px;
     background-color: #eff2f4;
     opacity: 0;
+    overflow: hidden;
 }
 .eligibility{
     width: 0px;

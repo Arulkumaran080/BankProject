@@ -9,13 +9,15 @@ import { LoanEligibility } from '../Models/loanEligibility.model';
 })
 export class EmployeeService {
 
+  baseUrl:string="http://localhost:8080";
+
   constructor(private http:HttpClient) { }
 
   postUser(data:any){
-    return this.http.post<any>("http://localhost:8080/api-emp/save",data);
+    return this.http.post<any>(this.baseUrl+"/api-emp/save",data);
   }
   
   getUser(){
-    return this.http.get<any>("http://localhost:8080/api-emp/getAll");
+    return this.http.get<any>(this.baseUrl+"/api-emp/getAll");
   }
 }
