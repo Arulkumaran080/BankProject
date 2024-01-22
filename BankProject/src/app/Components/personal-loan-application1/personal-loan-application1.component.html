@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="right">
-      <div class="register-form">
+      <div *ngIf="showForm" class="register-form">
         <form [formGroup]="form1" (ngSubmit)="onSubmit()" style="margin-top: 100px;">
           <div class="form-group">
             <label>Enter mobile number linked with Aadhaar</label>
@@ -102,9 +102,17 @@
           </div>
       
           <div class="form-group" style="display: flex; justify-content: center; padding-top: 50px;">
-            <button type="submit" style="display: flex; justify-content: space-between; padding-right: 0;" class="btn btn-primary">Next<mat-icon style="margin-left: 10px;">keyboard_arrow_right</mat-icon></button>
+            <button type="submit" style="display: flex; justify-content: space-between; padding-right: 0;background-color: #009dff;" class="btn btn-primary">Next<mat-icon style="margin-left: 10px;">keyboard_arrow_right</mat-icon></button>
           </div>
         </form>
+      </div>
+      <div *ngIf="!showForm" class="otp-verify">
+        <h2>Confirm your email address </h2>
+        <p>Please check your email for a verification link</p>
+        <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:6}"></ng-otp-input>
+        <span>Didn’t receive the email? We’ll send you another</span>
+        <a href="">Resend OTP</a>
+        <button class="btn" (click)="verifyOTP()">Submit</button>
       </div>
     </div>
   </div>

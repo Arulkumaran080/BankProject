@@ -1,149 +1,205 @@
-
-
-.header{
-    background-color: #009dff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 20px;
-    position: fixed;
-    width: 100vw;
+.header {
+  background-color: #009dff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  position: fixed;
+  width: 100vw;
 }
-.header img{
-    height: 60px;
+.header img {
+  height: 60px;
 }
-.header .home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header .home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.header .home i{
-    font-size: 25px;
-    cursor: pointer;
+.header .home i {
+  font-size: 25px;
+  cursor: pointer;
 }
 
 /* ...........personalLoan-main-content................. */
-.personalLoan-main-content{
-    display: flex;
-    width: 100%;
-    height: -webkit-calc(100vh-75px);
-    /* height: 100vh; */
-    /* background-color: #bb2c2c; */
+.personalLoan-main-content {
+  display: flex;
+  width: 100%;
+  height: -webkit-calc(100vh-75px);
+  /* height: 100vh; */
+  /* background-color: #bb2c2c; */
 }
-.personalLoan-main-content .left{
-    width: 50%;
-    height: 100vh;
-    background-color: #fff;
+.personalLoan-main-content .left {
+  width: 50%;
+  height: 100vh;
+  background-color: #fff;
 }
-.personalLoan-main-content .right{
-    width: 50%;
-    height: 100vh;
-    background-color: #e2efff;
-    display: flex;
-    align-items: center;
-    justify-content: center
+.personalLoan-main-content .right {
+  width: 50%;
+  height: 100vh;
+  background-color: #e2efff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ...........left........................ */
-.left{
-    padding: 0px 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.left {
+  padding: 0px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.left-head h2{
-    margin: 0;
+.left-head h2 {
+  margin: 0;
 }
-.left-head{
-    display: flex;
-    gap: 20px;
-    align-items: center;
+.left-head {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
-.left-head img{
-    width: 70px;
-    height: 100%;
-    background-color: #009dff;
-    border-radius: 15px;
-    padding: 15px;
+.left-head img {
+  width: 70px;
+  height: 100%;
+  background-color: #009dff;
+  border-radius: 15px;
+  padding: 15px;
 }
-.left-head-text h2{
-    font-family: "Mulish", sans-serif !important;
-    color: #414141c9;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 20px;
+.left-head-text h2 {
+  font-family: "Mulish", sans-serif !important;
+  color: #414141c9;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
 }
-.left-content-text{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    background-color: #e2efff;
-    /* margin-bottom: 50px; */
-    padding: 5px 20px;
-    border-radius: 28px;
-    text-transform: capitalize;
-    width: 400px;
+.left-content-text {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: #e2efff;
+  /* margin-bottom: 50px; */
+  padding: 5px 20px;
+  border-radius: 28px;
+  text-transform: capitalize;
+  width: 400px;
 }
-.left-content-text .number{
-    background-color: #fff;
-    padding: 0px 10px;
-    border-radius: 28px;
+.left-content-text .number {
+  background-color: #fff;
+  padding: 0px 10px;
+  border-radius: 28px;
 }
-.left-content-text .number h2{
-    font-size: 13px;
+.left-content-text .number h2 {
+  font-size: 13px;
 }
-.left-content-text h2{
-    margin: 0;
+.left-content-text h2 {
+  margin: 0;
 }
-.left-content-text span{
-    margin: 0;
+.left-content-text span {
+  margin: 0;
 }
-.dot-line{
-    display: flex;
-    /* justify-content: center; */
-    padding-left: 33px;
+.dot-line {
+  display: flex;
+  /* justify-content: center; */
+  padding-left: 33px;
 }
-.dot-line div{
-    /* background-color: aquamarine; */
-    height: 50px;
-    width: 5px;
-    border-left: 3px dashed #009dff54;
+.dot-line div {
+  /* background-color: aquamarine; */
+  height: 50px;
+  width: 5px;
+  border-left: 3px dashed #009dff54;
 }
-.done div{
-    border: none;
-    width: 2px;
-    background-color: #009dff;
+.done div {
+  border: none;
+  width: 2px;
+  background-color: #009dff;
 }
-.doned{
-    background-color: #009dff;
-    color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 20px 10px,
+.doned {
+  background-color: #009dff;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 20px 10px,
     rgba(0, 0, 0, 0.05) 0px 1px 20px 6px, rgba(0, 0, 0, 0.03) 3px 3px 8px 1px,
     rgba(0, 0, 0, 0.1) 0px 20px 30px 1px;
 }
-.current{
-    box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 20px 10px,
+.current {
+  box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 20px 10px,
     rgba(0, 0, 0, 0.05) 0px 1px 20px 6px, rgba(0, 0, 0, 0.03) 3px 3px 8px 1px,
     rgba(0, 0, 0, 0.1) 0px 20px 30px 1px;
 }
-.doned h2{
-    color: #009dff;
+.doned h2 {
+  color: #009dff;
 }
 
 /* ...........forms........ */
-.register-form{
-    min-width: 350px;
+.register-form {
+  min-width: 350px;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-form label{
-    color: #00527d !important;
-    font-family: "Mulish", sans-serif !important;
+form label {
+  color: #00527d !important;
+  font-family: "Mulish", sans-serif !important;
 }
-form span{
-    font-size: 12px;
+form span {
+  font-size: 12px;
+}
+
+/* ............otp............... */
+
+.otp-verify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.otp-verify h2 {
+  color: var(--UI-Greys-Neutral-1, #3c4856);
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 180%;
+}
+.otp-verify p {
+  color: var(--UI-Greys-Neutral-1, #3c4856);
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+  margin-bottom: 40px;
+}
+
+.otp-verify span {
+  color: var(--UI-Greys-Neutral-1, #3c4856);
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  margin-top: 30px;
+}
+
+.otp-verify a {
+  text-decoration: none;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.otp-verify button {
+    color: white;
+    margin-top: 20px;
+  display: flex;
+  width: 384px;
+  height: 40px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  background: var(--UI-Primary-colour-Primary, #009dff);
 }

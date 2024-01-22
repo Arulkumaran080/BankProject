@@ -1,23 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  AbstractControl,
-  FormBuilder,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { Component } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import Validation from 'src/app/Models/validation';
 import { DataService } from 'src/app/Services/data.service';
 import { MailService } from 'src/app/Services/mail.service';
 import { UserService } from 'src/app/Services/user.service';
-
-
 @Component({
-  selector: 'app-personal-loan-application1',
-  templateUrl: './personal-loan-application1.component.html',
-  styleUrls: ['./personal-loan-application1.component.css'],
+  selector: 'app-personal-loan-application4',
+  templateUrl: './personal-loan-application4.component.html',
+  styleUrls: ['./personal-loan-application4.component.css']
 })
-export class PersonalLoanApplication1Component implements OnInit {
+export class PersonalLoanApplication4Component {
   form1!: FormGroup;
   submitted = false;
   showForm:boolean=true;
@@ -44,25 +36,8 @@ export class PersonalLoanApplication1Component implements OnInit {
         email: ['', [Validators.required, Validators.email]],
         pancard:['',Validators.required],
         acceptTerms: [false, Validators.requiredTrue],
-      },
-      {
-        validators: [Validation.match('password', 'confirmPassword')],
       }
     );
-  }
-
-  onOtpChange(otp:any){
-    this.otp=otp
-  }
-
-  verifyOTP(){
-    const otp=parseInt(this.otp)
-    if(otp===this.data.EmailOTP){
-      console.log("same")
-      this.router.navigate(['/personalLoan/personalizeYourLoan'])
-    }else{
-      console.log("diff")
-    }
   }
 
   get f(): { [key: string]: AbstractControl } {
@@ -80,10 +55,5 @@ export class PersonalLoanApplication1Component implements OnInit {
       })
     }
     console.log(JSON.stringify(this.form1.value, null, 2));
-  }
-
-  onReset(): void {
-    this.submitted = false;
-    this.form1.reset();
   }
 }

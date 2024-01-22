@@ -32,6 +32,10 @@ import { EmiCalculatorComponent } from './Components/emi-calculator/emi-calculat
 import { PersonalLoanHomeComponent } from './Components/personal-loan-home/personal-loan-home.component';
 import { PersonalLoanDocumentsComponent } from './Components/personal-loan-documents/personal-loan-documents.component';
 import { PersonalLoanApplication1Component } from './Components/personal-loan-application1/personal-loan-application1.component';
+import { NgOtpInputModule } from 'ng-otp-input';
+import { PersonalLoanApplication2Component } from './Components/personal-loan-application2/personal-loan-application2.component';
+import { PersonalLoanApplication3Component } from './Components/personal-loan-application3/personal-loan-application3.component';
+import { PersonalLoanApplication4Component } from './Components/personal-loan-application4/personal-loan-application4.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +58,9 @@ import { PersonalLoanApplication1Component } from './Components/personal-loan-ap
     PersonalLoanHomeComponent,
     PersonalLoanDocumentsComponent,
     PersonalLoanApplication1Component,
+    PersonalLoanApplication2Component,
+    PersonalLoanApplication3Component,
+    PersonalLoanApplication4Component,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +77,7 @@ import { PersonalLoanApplication1Component } from './Components/personal-loan-ap
     MatCardModule,
     MatButtonModule,
     MatInputModule,
+    NgOtpInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
