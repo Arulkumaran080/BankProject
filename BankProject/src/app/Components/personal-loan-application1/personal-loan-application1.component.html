@@ -14,28 +14,28 @@
         </div>
       </div>
       <div class="dot-line done"><div></div></div>
-      <div class="left-c1 left-content-text current">
+      <div routerLink="/personalLoan/necessaryInformation" class="left-c1 left-content-text current">
         <div class="number">
           <h2>1</h2>
         </div>
         <span>Neseccesary Information</span>
       </div>
       <div class="dot-line"><div></div></div>
-      <div class="left-c2 left-content-text">
+      <div routerLink="/personalLoan/personalizeYourLoan" class="left-c2 left-content-text">
         <div class="number">
           <h2>2</h2>
         </div>
         <span>Personalize Your Loan</span>
       </div>
       <div class="dot-line"><div></div></div>
-      <div class="left-c3 left-content-text">
+      <div routerLink="/personalLoan/additionalInformation" class="left-c3 left-content-text">
         <div class="number">
           <h2>3</h2>
         </div>
         <span>Additional Information</span>
       </div>
       <div class="dot-line"><div></div></div>
-      <div class="left-c4 left-content-text">
+      <div routerLink="/personalLoan/loanAmount" class="left-c4 left-content-text">
         <div class="number">
           <h2>4</h2>
         </div>
@@ -53,7 +53,6 @@
               class="form-control"
               [ngClass]="{ 'is-invalid': submitted && f.mobileNumber.errors }"
             />
-            <span>(OTP for verification will be sent to this mobile number)</span>
             <div *ngIf="submitted && f.mobileNumber.errors" class="invalid-feedback">
               <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required</div>
             </div>
@@ -67,6 +66,7 @@
               class="form-control"
               [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
             />
+            <span>(OTP for verification will be sent to this Mail)</span>
             <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
               <div *ngIf="f.email.errors.required">Email is required</div>
               <div *ngIf="f.email.errors.email">Email is invalid</div>

@@ -106,35 +106,30 @@ nav .start-apply,a:nth-child(6):hover~.animation{
 
 /* .................................... */
 .personalLoan{
-    width: 0px;
-    height: 0px;
+    width: 100%;
     background-color: #54a923;
 }
 .intrest{
-    width: 0px;
-    height: 0px;
+    width: 100%;
     background-color: #2323a9;
-    opacity: 0;
+    /* opacity: 0; */
 }
 .document{
-    width: 0px;
-    height: 0px;
+    width: 100%;
     background-color: #eff2f4;
-    opacity: 0;
-    overflow: hidden;
+    /* opacity: 0; */
+    /* overflow: hidden; */
 }
 .eligibility{
-    width: 0px;
-    height: 0px;
+    width: 100%;
     /* background-color: #f6ff00; */
-    opacity: 0;
-    overflow: hidden;
+    /* opacity: 0; */
+    /* overflow: hidden; */
 }
 .emi{
-    width: 0px;
-    height: 0px;
+    width: 100%;
     /* background-color: #ff006a; */
-    opacity: 0;
+    /* opacity: 0; */
 }
 .personal-loan-content-active{
     width: 100%;

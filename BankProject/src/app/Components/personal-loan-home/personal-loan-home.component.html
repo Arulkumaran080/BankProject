@@ -13,11 +13,11 @@
         <a (click)="active('apply')" routerLink="/personalLoan/necessaryInformation">apply now</a>
         <div class="animation {{a}}"></div>
       </nav>
-      <div class="personalLoan"></div>
-      <div class="emi"><app-emi-calculator></app-emi-calculator></div>
-      <div class="eligibility personal-loan-content-active"><app-personal-loan-eligibility></app-personal-loan-eligibility></div>
-      <div class="intrest"></div>
-      <div class="document"><app-personal-loan-documents></app-personal-loan-documents></div>
+      <div *ngIf="className==='personalLoan'" class="personalLoan"></div>
+      <div *ngIf="className==='emi'" class="emi"><app-emi-calculator></app-emi-calculator></div>
+      <div *ngIf="className==='eligibility'" class="eligibility "><app-personal-loan-eligibility></app-personal-loan-eligibility></div>
+      <div *ngIf="className==='intrest'" class="intrest"></div>
+      <div *ngIf="className==='document'" class="document"><app-personal-loan-documents></app-personal-loan-documents></div>
       <div class="apply"></div>
     </div>
   </div>
