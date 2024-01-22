@@ -39,6 +39,9 @@
     width: 50%;
     height: 100vh;
     background-color: #e2efff;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 /* ...........left........................ */
@@ -126,4 +129,21 @@
 }
 .doned h2{
     color: #009dff;
+}
+
+/* ...........forms........ */
+.register-form{
+    min-width: 350px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+form label{
+    color: #00527d !important;
+    font-family: "Mulish", sans-serif !important;
+}
+form span{
+    font-size: 12px;
 }

@@ -15,7 +15,7 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { PersonalLoanEligibilityComponent } from './Components/personal-loan-eligibility/personal-loan-eligibility.component';
 import { EmiCalculatorComponent } from './Components/emi-calculator/emi-calculator.component';
 import { PersonalLoanHomeComponent } from './Components/personal-loan-home/personal-loan-home.component';
-import { PersonalLoanApplication1Component } from './Components/personal-loan-application1/personal-loan-application1.component';
+import { PersonalLoanApplication1Component } from './Components/personal-loan-application1/personal-loan-application1.component'; 
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -30,10 +30,16 @@ const routes: Routes = [
   { path: 'personal-loan', component: PersonalLoanComponent },
   { path: 'check-eligibility', component: CheckEligibilityComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'personalLoanEligibility', component: PersonalLoanEligibilityComponent },
+  {
+    path: 'personalLoanEligibility',
+    component: PersonalLoanEligibilityComponent,
+  },
   { path: 'emiCalculator', component: EmiCalculatorComponent },
   { path: 'personalLoanHome', component: PersonalLoanHomeComponent },
-  { path: 'personalLoan/necessaryInformation', component: PersonalLoanApplication1Component },
+  {
+    path: 'personalLoan/necessaryInformation',
+    component: PersonalLoanApplication1Component,
+  },
 ];
 
 @NgModule({
