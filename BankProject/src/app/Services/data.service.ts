@@ -18,5 +18,6 @@ export class DataService {
 
   currentEmployee!: Employee;
 
+  EmailOTP!:number;
   constructor() {}
 }

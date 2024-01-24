@@ -7,20 +7,22 @@ import { User } from '../Models/user.model';
   providedIn: 'root',
 })
 export class LoanService {
+  baseUrl: string = 'http://localhost:8080';
+
   constructor(private http: HttpClient) {}
 
   postLoan(data: any) {
-    return this.http.post<any>('http://localhost:8080/loan-app/allLoan', data);
+    return this.http.post<any>(this.baseUrl + '/loan-app/allLoan', data);
   }
 
   getLoan() {
-    return this.http.get<any>('http://localhost:8080/loan-app/allLoan');
+    return this.http.get<any>(this.baseUrl + '/loan-app/allLoan');
   }
 
-  aproved(id:number,data:any){
-    return this.http.put<any>('http://localhost:8080/loan-app/approved/'+id,data);
+  aproved(id: number, data: any) {
+    return this.http.put<any>(this.baseUrl + '/loan-app/approved/' + id, data);
   }
-  rejected(id:number,data:any){
-    return this.http.put<any>('http://localhost:8080/loan-app/rejected/'+id,data);
+  rejected(id: number, data: any) {
+    return this.http.put<any>(this.baseUrl + '/loan-app/rejected/' + id, data);
   }
 }

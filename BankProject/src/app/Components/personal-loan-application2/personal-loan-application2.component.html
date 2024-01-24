@@ -1,0 +1,112 @@
+<div class="personalLoan-body">
+    <div class="header">
+      <img src="assets/Images/bank-name.png" alt="" />
+      <button routerLink="/home" class="btn home">
+        <i class="fas fa-home"></i>
+      </button>
+    </div>
+    <div class="personalLoan-main-content">
+      <div class="left">
+        <div class="left-head">
+          <img src="assets/Images/borrower-icon.png" alt="Images" />
+          <div class="left-head-text">
+              <h2>Get your</h2><h2>loan approved </h2><h2>in 4 simple steps️</h2>
+          </div>
+        </div>
+        <div class="dot-line done"><div></div></div>
+        <div routerLink="/personalLoan/necessaryInformation" class="left-c1 left-content-text  doned">
+          <div class="number">
+            <h2>1</h2>
+          </div>
+          <span>Neseccesary Information</span>
+        </div>
+        <div class="dot-line done"><div></div></div>
+        <div routerLink="/personalLoan/personalizeYourLoan" class="left-c2 left-content-text current">
+          <div class="number">
+            <h2>2</h2>
+          </div>
+          <span>Personalize Your Loan</span>
+        </div>
+        <div class="dot-line"><div></div></div>
+        <div routerLink="/personalLoan/additionalInformation" class="left-c3 left-content-text">
+          <div class="number">
+            <h2>3</h2>
+          </div>
+          <span>Additional Information</span>
+        </div>
+        <div class="dot-line"><div></div></div>
+        <div routerLink="/personalLoan/loanAmount" class="left-c4 left-content-text">
+          <div class="number">
+            <h2>4</h2>
+          </div>
+          <span>Loan Amount</span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="register-form">
+          <form [formGroup]="form1" (ngSubmit)="onSubmit()" style="margin-top: 100px;">
+            <div class="form-group">
+              <label>Enter mobile number linked with Aadhaar</label>
+              <input
+                type="text"
+                formControlName="mobileNumber"
+                class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.mobileNumber.errors }"
+              />
+              <span>(OTP for verification will be sent to this mobile number)</span>
+              <div *ngIf="submitted && f.mobileNumber.errors" class="invalid-feedback">
+                <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required</div>
+              </div>
+            </div>
+        
+            <div class="form-group">
+              <label>Email ID</label>
+              <input
+                type="text"
+                formControlName="email"
+                class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+              />
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email is invalid</div>
+              </div>
+            </div>
+        
+            <div class="form-group">
+              <label>Enter Permanent Account Number(PAN)</label>
+              <input
+                type="text"
+                formControlName="pancard"
+                class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.mobileNumber.errors }"
+              />
+              <div *ngIf="submitted && f.pancard.errors" class="invalid-feedback">
+                <div *ngIf="f.pancard.errors.required">Pancard is required</div>
+              </div>
+            </div>
+        
+            <div class="form-group form-check">
+              <input
+                type="checkbox"
+                formControlName="acceptTerms"
+                class="form-check-input"
+                [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }"
+              />
+              <label for="acceptTerms" class="form-check-label"
+                >I hereby declare that I am currently residing in India</label
+              >
+              <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">
+                Accept Terms is required
+              </div>
+            </div>
+        
+            <div class="form-group" style="display: flex; justify-content: center; padding-top: 50px;">
+              <button type="submit" style="display: flex; justify-content: space-between; padding-right: 0;background-color: #009dff;" class="btn btn-primary">Next<mat-icon style="margin-left: 10px;">keyboard_arrow_right</mat-icon></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

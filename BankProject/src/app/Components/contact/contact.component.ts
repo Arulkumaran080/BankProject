@@ -12,7 +12,12 @@ import { Router } from '@angular/router';
 export class ContactComponent {
   modelForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private http: HttpClient,private data:DataService,private router:Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private data: DataService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.modelForm = this.fb.group({
@@ -35,10 +40,10 @@ export class ContactComponent {
     };
 
     // Make a POST request to Formspree
-    this.http.post('https://formspree.io/f/xvojeawq', formData).subscribe(
+    this.http.post('https://formspree.io/f/mpzvwvnw', formData).subscribe(
       (response) => {
         alert('Successfully submitted');
-        
+
         // Reset the form after a successful submission
         setTimeout(() => {
           this.modelForm.reset();

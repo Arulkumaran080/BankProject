@@ -5,14 +5,14 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class AdminService {
+export class MailService {
 
   baseUrl:string="http://localhost:8080";
 
   constructor(private http:HttpClient) { }
 
-  getUser(){
-    return this.http.get<any>(this.baseUrl+"/admin");
+  sendOTPMail(mail:string){
+    return this.http.get<any>(this.baseUrl+"/sendMail/"+mail);
   }
 
 }
