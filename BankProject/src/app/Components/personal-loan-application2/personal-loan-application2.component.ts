@@ -15,7 +15,9 @@ export class PersonalLoanApplication2Component {
   submitted = false;
   showForm:boolean=true;
   otp:any
-
+   // City Names
+   City: any = ['Florida', 'South Dakota', 'Tennessee', 'Michigan']
+  
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
@@ -27,18 +29,17 @@ export class PersonalLoanApplication2Component {
   ngOnInit() {
     this.form1 = this.formBuilder.group(
       {
-        mobileNumber: [
-          '',
-          [
-            Validators.required,
-            Validators.pattern('^((//+91-?)|0)?[0-9]{10}$'),
-          ],
-        ],
-        email: ['', [Validators.required, Validators.email]],
-        pancard:['',Validators.required],
-        acceptTerms: [false, Validators.requiredTrue],
+        salary:['',Validators.required],
+        organization: ['',Validators.required],
+        salarySlip:['',Validators.required],
+        resident:['',Validators.required],
       }
     );
+  }
+
+  sample(a:any){
+    this.form1.value.salary=a;
+    console.log(a)
   }
 
   get f(): { [key: string]: AbstractControl } {
@@ -49,11 +50,6 @@ export class PersonalLoanApplication2Component {
     this.submitted = true;
     if (this.form1.invalid) {
       return;
-    }else{
-      this.showForm=false
-      this.mail.sendOTPMail(this.form1.value.email).subscribe((res:any)=>{
-        this.data.EmailOTP=res;
-      })
     }
     console.log(JSON.stringify(this.form1.value, null, 2));
   }

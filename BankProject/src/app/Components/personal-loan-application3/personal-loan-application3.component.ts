@@ -48,11 +48,6 @@ export class PersonalLoanApplication3Component {
     this.submitted = true;
     if (this.form1.invalid) {
       return;
-    }else{
-      this.showForm=false
-      this.mail.sendOTPMail(this.form1.value.email).subscribe((res:any)=>{
-        this.data.EmailOTP=res;
-      })
     }
     console.log(JSON.stringify(this.form1.value, null, 2));
   }

@@ -145,3 +145,15 @@
   form span {
     font-size: 12px;
   }
+  .salary{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .mat-mdc-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-mdc-text-field-wrapper {
+    cursor: pointer;
+    background-color: blue;
+}
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: white !important;
+}
